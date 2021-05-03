@@ -1,1 +1,1 @@
-![tree](tree.gif)
+<img src="tree.gif" width="100%">
