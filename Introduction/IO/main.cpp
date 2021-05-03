@@ -9,11 +9,13 @@ void output_newline();
 int main() {
     std::cout << "This is epic\n" << std::endl;
     inputs();
+
     std::cout << "Let's actually time the function execution times for endl and \\n \n" << std::endl;
     output_endl();
     std::cout << "" << std::endl;
     output_newline();
     std::cout << "" << std::endl;
+
     return 0;
 }
 
