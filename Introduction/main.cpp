@@ -9,9 +9,11 @@ void output_newline();
 int main() {
     std::cout << "This is epic\n" << std::endl;
     inputs();
-    std::cout << "Let's actually time the program execution times for endl and \\n \n" << std::endl;
+    std::cout << "Let's actually time the function execution times for endl and \\n \n" << std::endl;
     output_endl();
+    std::cout << "" << std::endl;
     output_newline();
+    std::cout << "" << std::endl;
     return 0;
 }
 
@@ -26,7 +28,9 @@ void inputs() {
 
 void output_endl() {
     auto start = std::chrono::high_resolution_clock::now();
-    std::cout << "Hello World" << std::endl;
+    for (int i = 0; i < 10; i++) {
+        std::cout << "Hello World" << std::endl;
+    }
     auto stop = std::chrono::high_resolution_clock::now();
     auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
     std::cout << "endl: " << duration.count() << "ms" << std::endl;
@@ -34,7 +38,9 @@ void output_endl() {
 
 void output_newline() {
     auto start = std::chrono::high_resolution_clock::now();
-    std::cout << "Hello World\n";
+    for (int i = 0; i < 10; i++) {
+        std::cout << "Hello World\n";
+    }
     auto stop = std::chrono::high_resolution_clock::now();
     auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
     std::cout << "\\n: " << duration.count() << "ms" << std::endl;
